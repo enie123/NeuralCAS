@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## Towards a Neural Computer Algebra System: Solving Differential Equations through Neural Programming
 
-You can use the [editor on GitHub](https://github.com/enie123/NeuralCAS/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+	
+Computer algebra systems have been around since the mid-20th century, and they have been essential to scientists in many fields for working with symbolic expressions. Differential equations, in particular, are used throughout physics in areas including thermodynamics, fluid dynamics, and quantum mechanics. Physicists currently use computer algebra systems such as Sympy for solving these differential equations. However, one of the issues with these approaches is that the computer algebra systems are often hard-coded to handle different classes of differential equations. As a result, there is a limit to the differential equations that these systems can solve. Another issue with computer algebra systems is the amount of time and computational resources required to solve these differential equations which can be large. An approach to tackling these problems is through the use of deep neural networks. This idea is not new in the field of deep learning and dates back to the 1990s. However, all approaches to this problem thus far have relied upon using numerical evaluations of the differential equation to gather a training dataset. This is then extrapolated by a neural network to a general solution. For these approaches, the neural network trained on a given differential equation does not generalize to others. Hence, this is impractical as an alternative to computer algebra systems for solving differential equations.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+An alternative to these approaches is proposed by my advisor Forough Arabshahi which is to symbolically manipulate these differential equations through the use of TreeLSTM networks. Forough Arabshahi is currently a postdoctoral associate in the machine learning department at Carnegie Mellon University and her research focuses on neural programming, deep learning, probabilistic graphical models, and spectral learning. These networks are able to train on the induced tree-structured topology of mathematical equations. A general mathematical equation can be broken up into individual nodes within a tree by splitting the equation on each of the binary operators and dividing the two operands into two sides of the tree. Preliminary research in this direction has shown that this approach is promising and the TreeLSTM networks can produce accurate results with high accuracy for verifying the solutions to differential equations. Assuming that research in this direction is successful, these networks can provide an alternative approach that is more powerful than traditional computer algebra systems. Although neural networks cannot achieve 100% accuracy, they can produce results more efficiently and for a broader class of differential equations. For example, current computer algebra systems can only solve a small subset of partial differential equations, so this is one area that we will be exploring. 
 
-### Markdown
+Determining solutions to the differential equations can be divided into two primary steps, which are producing a set of candidate solutions and choosing the correct solution from the set of candidate solutions. The first step has been studied in the context of program synthesis. The paper Neural-Guided Deductive Search for Real-Time Program Synthesis from Examples by Kalyan et. al proposes an approach for combining symbolic logic techniques and deep learning for solving the problem of producing programs from input and output examples. This is one of several papers on this topic. In the preliminary research in Arabshahi et. al, they focused on the second step of this process, so it is unclear as to how well current methods can handle the problem of determining a set of candidate solutions. There does not appear to be an obvious choice for the set of candidate solutions for an arbitrary ordinary differential equation. In order to understand this problem of solving differential equations, I will also need to delve more into the computer algebra literature on this topic.  There are a number of papers and surveys of this field which I am beginning to read. Another challenge we face is determining how well these methods extend to partial differential equations (PDE) which are more complex than ordinary differential equations (ODE).  For our project goals, our benchmarks will be the accuracy of the solutions and the percentage of ODEs and PDEs that our system can solve. Based on the aforementioned two-step process, the framework will likely consist of two independent neural network components. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Our 100% goal is to determine a system for finding the candidate solutions for ODEs and to extend these methods to PDEs. For the candidate solutions, we can begin by implementing existing methods from the area of program synthesis which will serve as a baseline. We should then be able to package the two components together into a neural framework for solving differential equations.
 
-```markdown
-Syntax highlighted code block
+Our 75% goal is similar to the previous goal. It may turn out that finding the candidate solutions to the differential equations is a difficult problem that takes a lot of time. In this case, we will focus on tackling this problem for ODEs. 
 
-# Header 1
-## Header 2
-### Header 3
+Our 125% goal will include all of the items within the 100% goal. From there we can branch out and explore other potential approaches to this problem of solving differential equations. We can then compare the different methods to see if there is an approach that can serve as a practical alternative to current computer algebra systems for this application. Since scientists need correctness guarantees, we would need to find a way of combining these deep learning-based approaches with some sort of deterministic verifier that can provide feedback on the results obtained from our system. 
 
-- Bulleted
-- List
+Our project milestones are outlined below:
 
-1. Numbered
-2. List
+Last day of the semester - For this semester I will focus on reading through the background literature so that I have a solid foundation for the work next semester.  In particular, I hope to understand the mathematics behind how current computer systems solve differential equations. Current theory in this area uses differential ideal theory, differential galois theory, lie algebras among other topics. I do not quite have the mathematical background nor time to dedicate myself to learning these topics so I will focus on gaining an intuition for how these topics apply to solving differential equations. I would also like to begin experimenting with different methods of determining candidate solutions for differential equation. 
 
-**Bold** and _Italic_ and `Code` text
+ February 1st - I will have finished implementing and training two different methods of determining candidate solutions. Training deep neural networks can be extremely time consuming as a result of the training time and also hyperparameter optimization. 
+ 
+February 15th - I will have thought about new methods for determining candidate solutions. I will implement a method that is mostly novel and finish training it by this time. 
 
-[Link](url) and ![Image](src)
-```
+March 1st - I will have finished combining the two components together into a framework for solving ordinary equations. I will also have finished writing documentation, so that the framework is easy to use for other users. 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+March 22nd - By this date, I will have thought about the ways of extending these methods from ordinary differential equations to partial differential equations. I will have begun experimenting with the different proposed solutions.
 
-### Jekyll Themes
+April 5th - I will have finished implementing a verifier for partial differential equations. By verifier, I am referring to a neural network that is able to check the correctness of a solution with high accuracy. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/enie123/NeuralCAS/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+April 19th - I will have finished implementing a method for determining candidate solutions for partial differential equations. This might involve extending the methods for ordinary differential equations or coming up with an entirely new approach. 
 
-### Support or Contact
+May 3nd - I will have finished combining the two components for PDEs to obtain an alternative method for solving them. Also, I will have finished putting together documentation for the framework so that other people can also use the framework to solve ordinary and partial differential equations. 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+For this project, we will use MXNet and potentially Tensorflow for implementing the deep learning components such as the TreeLSTM networks. These are open source and so they are available online. In terms of hardware and machines, I will need access to GPUs to shorten the training time. I can either use GPUs through Amazon web services or physical GPUs. My advisor has access to GPUs which I should be able to use. Also, Amazon usually provides credits for students to use their services for educational purposes and so that would be an alternative solution. 
