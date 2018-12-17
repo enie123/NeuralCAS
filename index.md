@@ -9,7 +9,7 @@ An alternative to these approaches is proposed by my advisor Forough Arabshahi w
 
 Determining solutions to the differential equations can be divided into two primary steps, which are producing a set of candidate solutions and choosing the correct solution from the set of candidate solutions. The first step has been studied in the context of program synthesis. The paper Neural-Guided Deductive Search for Real-Time Program Synthesis from Examples by Kalyan et. al proposes an approach for combining symbolic logic techniques and deep learning for solving the problem of producing programs from input and output examples. This is one of several papers on this topic. In the preliminary research in Arabshahi et. al, they focused on the second step of this process, so it is unclear as to how well current methods can handle the problem of determining a set of candidate solutions. There does not appear to be an obvious choice for the set of candidate solutions for an arbitrary ordinary differential equation. In order to understand this problem of solving differential equations, I will also need to delve more into the computer algebra literature on this topic.  There are a number of papers and surveys of this field which I am beginning to read. Another challenge we face is determining how well these methods extend to partial differential equations (PDE) which are more complex than ordinary differential equations (ODE).  For our project goals, our benchmarks will be the accuracy of the solutions and the percentage of ODEs and PDEs that our system can solve. Based on the aforementioned two-step process, the framework will likely consist of two independent neural network components. 
 
-###Project Goals
+### Project Goals
 
 Our 100% goal is to determine a system for finding the candidate solutions for ODEs and to extend these methods to PDEs. For the candidate solutions, we can begin by implementing existing methods from the area of program synthesis which will serve as a baseline. We should then be able to package the two components together into a neural framework for solving differential equations.
 
@@ -18,7 +18,7 @@ Our 75% goal is similar to the previous goal. It may turn out that finding the c
 Our 125% goal will include all of the items within the 100% goal. From there we can branch out and explore other potential approaches to this problem of solving differential equations. We can then compare the different methods to see if there is an approach that can serve as a practical alternative to current computer algebra systems for this application. Since scientists need correctness guarantees, we would need to find a way of combining these deep learning-based approaches with some sort of deterministic verifier that can provide feedback on the results obtained from our system. 
 
 
-###Project Milestones
+### Project Milestones
 
 Our project milestones are outlined below:
 
@@ -38,7 +38,7 @@ April 19th - I will have finished implementing a method for determining candidat
 
 May 3nd - I will have finished combining the two components for PDEs to obtain an alternative method for solving them. Also, I will have finished putting together documentation for the framework so that other people can also use the framework to solve ordinary and partial differential equations. 
 
-###Resources Needed
+### Resources Needed
 
 For this project, we will use MXNet and potentially Tensorflow for implementing the deep learning components such as the TreeLSTM networks. These are open source and so they are available online. In terms of hardware and machines, I will need access to GPUs to shorten the training time. I can either use GPUs through Amazon web services or physical GPUs. My advisor has access to GPUs which I should be able to use. Also, Amazon usually provides credits for students to use their services for educational purposes and so that would be an alternative solution. 
 
