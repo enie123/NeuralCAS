@@ -56,3 +56,29 @@ Based on the mathematics behind solving differential equations currently, solvin
 There haven’t been any major surprises so far for the project. My milestone goals for the Spring remain the same. I also have all of the resources that I will need for my 15-400 project. 
 
 
+## Project Milestone 2
+
+
+Since the end of the last semester there have been some major changes in the goals. It appears that we will probably not be able to get to solving partial differential equations this semester since the challenge of solving just ordinary differential equations is still fairly significant. 
+In the last semester, I read about relevant literature; however, I didn’t really have a chance to read through the code base for previous projects that my mentor worked on in the past that are relevant for this project. 
+Since the last meeting, I have mostly worked on reading more papers that are relevant to this research which included several papers related to combining modules in dynamic networks. 
+I did not meet my milestone for this week because it turns out that determining candidate solutions turns out to be more challenging than I had expected. 
+Surprises: Have there been any major surprises in your project since your last bi-weekly status
+meeting? If they were bad surprises, have you managed to work around them?
+Looking Ahead: What do you plan to focus on and accomplish over the next two weeks?
+In the next two weeks, I hope to sort out all of the logistics such as computational resources so that I can focus on experimenting different solutions to the problem. 
+As mentioned earlier, I will probably take more time to think about and implement different solutions to this problem instead of trying to tackle partial differential equations as well. 
+I am trying to use the PSC in order to run some of the experiments. However, I think there is a memory cap which prevents me from training networks which are memory intensive. 
+
+
+## Project Milestone 3
+
+There have not been any major changes in goals or implementation of the project since last week. Since the last biweekly meeting, I’ve been reading more papers related to this problem. Another new problem that we identified is augmenting the TreeLSTM networks with memory. For the verification portion of the problem, one of the issues is that the networks only work up to a certain depth so augmenting memory could be a way of enabling these to work up to a greater depth. Some possible solutions for augmenting the memory for these systems is to apply a neural stack or queue. I read the papers that introduced these new neural structures. 
+
+Since I was behind on the last milestone, I am also behind the original milestone for this week. So, the update milestone for next week is to sort out the situation with the computational resources and to also finish implementing an initial version of the solution to this problem based on the paper mentioned above. So, the general idea for the solution based on the paper above is that we can generate a set of differential equations and solutions using sympy the symbolic mathematics library. We can generate the set of differential equations following the tree structure that we are using. Each node is an operation in the equations and the two sides of the operation form the branches to the children of the node. This generated set serves as the dataset for which we can apply the results of the paper. The general idea of the paper is that we can generate complex structured outputs by basing the output on previous outputs that are similar and then modifying them. These two tasks are called retrieve and edit respectively. In order to tackle the problem of generating candidate solutions, we first retrieve differential equations that are similar to the one we are attempting to solve. One of the problems to tackle is figuring out how to define this similarity between different differential equations. Using the tree structure, we can potentially embed the trees as vector using TreeLSTMs, and we can compare the vectors in order to determine the similarity. A potential roadblock is whether similar differential equations have similar solutions. Testing some basic examples it appears that it is true for the most part. Once we have a way of generating candidate solutions, we can also pipeline this first part with a network for verifying the correct solutions to obtain an end to end system for solving differential equations (ones that can be solved through Laplace transforms). 
+
+I tried using PSC in order to generate equations which we will use for training our networks as described above. However, everytime I run something on PSC the program gets killed before it finishes running. My advisor is also working on getting me access to a GPU cluster, so this situation will hopefully be resolved by the next meeting. 
+Over the next two weeks, I will implement a version of the retrieve-edit framework for this problem and begin testing the viability of such as solution for solving these differential equations. I should be acquiring access to GPU clusters by the end of this week. As mentioned before the PSC does not appear to work. I am not sure if I need special access in order to use them properly. 
+
+
+
