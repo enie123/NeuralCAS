@@ -92,10 +92,15 @@ The issue with computational resources has also been resolved. I have obtained a
 ## Project Milestone 5
 
 There have not been any major changes in the goals since the last meeting. 
+
 Since the last meeting, I have been working on the implementation for the new network. I am close to done with the implementation of the memory-augmented version of the TreeLSTM network. The equations for the new network have been worked out already, so what remains is just a few implementation details. The details for the memory-augmented version can be found in the github repository. 
+
 I would have liked to made slightly more progress for this milestone. However, during spring break, I lost my laptop which slowed down my progress. 
+
 There have not been any major surprises since the last meeting besides losing my laptop, which shouldn’t really affect my progress too much once I get back up to speed. 
+
 For the next two weeks, I will be working on finishing up the implementation of the memory-augmented TreeLSTM network and running experiments to see how well the new network performs. Based on the results, it is likely that some adjustments will have to be made to the implementation details in order for the new network to perform well. I am aiming to reach the point where there is significant improvement in 
+
 At this point I should have almost all of the resources that I need for this project. 
 
 
