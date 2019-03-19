@@ -80,5 +80,25 @@ Since I was behind on the last milestone, I am also behind the original mileston
 I tried using PSC in order to generate equations which we will use for training our networks as described above. However, everytime I run something on PSC the program gets killed before it finishes running. My advisor is also working on getting me access to a GPU cluster, so this situation will hopefully be resolved by the next meeting. 
 Over the next two weeks, I will implement a version of the retrieve-edit framework for this problem and begin testing the viability of such as solution for solving these differential equations. I should be acquiring access to GPU clusters by the end of this week. As mentioned before the PSC does not appear to work. I am not sure if I need special access in order to use them properly. 
 
+## Project Milestone 4
+
+There have not been any more change in goals. We have decided that we will begin by focusing on augmenting the TreeLSTM networks with memory. In order to augment the TreeLSTM networks with memory, I have been working with my advisor to think about how the equations will change will shifting from the original implementation of TreeLSTM networks to the new implementation. 
+
+The current idea that we are now working on as mentioned above is using memory-augmented TreeLSTM networks in order to increase the depth at which the networks are able to verify the solutions to the differential equations. Currently, maximum depth for the networks without memory is around 7, so we hope to increase this maximum depth through the memory-augmentation. For the next two weeks, I hope to work out the details of the implementation for the new network and begin experimentation.  
+
+The issue with computational resources has also been resolved. I have obtained access to a GPU cluster, so I will be able to train networks on there.  
+
+
+## Project Milestone 5
+
+There have not been any major changes in the goals since the last meeting. 
+Since the last meeting, I have been working on the implementation for the new network. I am close to done with the implementation of the memory-augmented version of the TreeLSTM network. The equations for the new network have been worked out already, so what remains is just a few implementation details. The details for the memory-augmented version can be found in the github repository. 
+I would have liked to made slightly more progress for this milestone. However, during spring break, I lost my laptop which slowed down my progress. 
+There have not been any major surprises since the last meeting besides losing my laptop, which shouldn’t really affect my progress too much once I get back up to speed. 
+For the next two weeks, I will be working on finishing up the implementation of the memory-augmented TreeLSTM network and running experiments to see how well the new network performs. Based on the results, it is likely that some adjustments will have to be made to the implementation details in order for the new network to perform well. I am aiming to reach the point where there is significant improvement in 
+At this point I should have almost all of the resources that I need for this project. 
+
+
+
 
 
