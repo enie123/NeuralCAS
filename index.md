@@ -103,7 +103,14 @@ For the next two weeks, I will be working on finishing up the implementation of 
 
 At this point I should have almost all of the resources that I need for this project. 
 
+##Project Milestone 6
 
+There have not been any major changes to the goals since the previous meeting. 
 
+The past two weeks I have continued to work on the implementation for the new network. The implementation of the memory-augmented version of the TreeLSTM network is completed. There are still a few bugs that I need to fix in the implementation, but I should be able to start experimenting in the next two weeks. 
+
+Completing the implementation of the memory-augmented version took longer than I expected mostly due to my lack of familiarity with the framework. 
+
+At this point I have all of the resources that I need for this project. 
 
 
