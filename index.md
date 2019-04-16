@@ -113,4 +113,15 @@ Completing the implementation of the memory-augmented version took longer than I
 
 At this point I have all of the resources that I need for this project. 
 
+##Project Milestone 7 
+
+There have not been any major changes to goals since the last meeting. 
+
+The past few weeks, I have worked on continuing to debug the program. It turned out that our original implementation had some flaws, and so we had to reimplement some of the components, which required some modifications to the original program. The issue was that some of the code I wrote didn't fit into the framework. At this point, I think the implementation is almost complete. There are still some bugs when I tried running experiments, so I will try to track those down by the
+end of this week.
+
+As before this is taking longer than expected due to my lack of familiarity with the deep learning framework used for this project. 
+
+
+
 
